@@ -15,7 +15,7 @@ class AppButton extends StatelessWidget {
         height: 45,
         decoration: BoxDecoration(
             boxShadow: const [BoxShadow(color: Colors.black26,offset: Offset(2, -2),blurRadius: 10)],
-            color: Colors.white, borderRadius: BorderRadius.circular(10)),
+            color: Colors.green, borderRadius: BorderRadius.circular(10)),
         child: _buildChild,
       ),
     );
@@ -28,7 +28,7 @@ class AppButton extends StatelessWidget {
           child: child ??
               Text(
                 buttonText ?? "",
-                style: const TextStyle(fontSize: 7, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 8, fontWeight: FontWeight.bold,color: Colors.white),
               ),
         ));
   }
