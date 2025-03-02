@@ -1,16 +1,68 @@
-# marti_case
 
-A new Flutter project.
+Bu proje, Flutter kullanarak geliştirilmiş bir mobil uygulamadır. Clean mimari kullanılarak yapılandırılmıştır.
 
-## Getting Started
+## İçindekiler
 
-This project is a starting point for a Flutter application.
+- [Başlarken](#başlarken)
+- [Kurulum](#kurulum)
+- [Proje Yapısı](#proje-yapısı)
+- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
 
-A few resources to get you started if this is your first Flutter project:
+## Başlarken
+Bu proje, Flutter SDK kullanılarak oluşturulmuştur. Uygulamanın yerel ortamınızda çalıştırılması için aşağıdaki adımları izleyin.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Kurulum
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Repoyu klonlayın
+git clone https://github.com/ufukoztp/marti_case.git
+
+# Proje dizinine gidin
+cd marti_case
+
+# Gerekli paketleri yükleyin
+flutter pub get
+
+# Uygulamayı çalıştırın
+flutter run
+
+## Proje Yapısı
+```
+lib/
+├── core/
+│   ├── base/                 # Base yapılar
+│   ├── extensions/           # Extensionslar'ın yönetimi
+│   ├── logger/               # Uygulama logger class'ları
+│   ├── init/                 # Dependency Injection Yönetimi
+│   └── shared_widgets/              # Atomic Widget'lar
+├── features/
+│   ├── data/
+│   │   └──── models/         # Response modeller
+│   │   └──── repositories/   # Repository'ler
+│   │   └──── services/       # Http Istekleri
+│   │
+│   ├── domain/
+│   │   └──── entities/       # Entity modeller
+│   │   └──── repositories/   # Soyut Repository'ler
+│   │   └──── services/       # Soyut Http Istekleri
+│   │
+│   ├── presentation/
+│       └──── widgets/        # Ekranlara özel widgetlar
+│       └──── cubit/          # Bloc ve Cubit'ler
+│       └──── mixinler/       # Ekranlara özel mixinler
+│       └──── view/           # Ekranlar
+│
+└── main.dart  # Uygulama giriş noktası
+```
+
+# Kullanılan Teknolojiler
+```
+  State Management: flutter_bloc
+  Model Generation: freezed
+  Local Database: Hive
+  Dependency Injection: get_it
+  Responsive UI: flutter_screenutil
+  Map Service: Google map
+  Architecture: Clean Architecture, Atomic Widget
+```
+
+
